@@ -21,6 +21,15 @@ servicos = [
 
 selecao_servicos = st.multiselect("Escolha os serviços:", servicos)
 
+# Definir os serviços que requerem informações adicionais
+servicos_requerem_info_adicional = [
+    "Dissertação",
+    "Relatório de Estágio",
+    "Projeto de Extensão",
+    "Prova do",
+    "Cuidar da Plataforma de Disciplina"
+]
+
 # Funções de cálculo de preço (definidas anteriormente)
 def preco_resumo():
     return 40
@@ -34,7 +43,7 @@ def preco_pesquisa(paginas):
     elif paginas == 10:
         return 35
     else:
-        return 25 + ((paginas - 5) * 2)  # Exemplo de cálculo adicional
+        return 25 + ((paginas - 5) * 2)
 
 def preco_dissertacao():
     return 25
@@ -58,7 +67,7 @@ def preco_atividade_em_plataforma():
     return 25
 
 def preco_cuidar_plataforma(qtd_disciplinas):
-    return 100 + (qtd_disciplinas - 1) * 50  # Exemplo de cálculo adicional
+    return 100 + (qtd_disciplinas - 1) * 50
 
 def preco_projeto_extensao():
     return 150
@@ -71,7 +80,6 @@ def preco_mini_resumo():
 
 def preco_relatorio_estagio():
     return 30
-
 
 total = 0
 
@@ -114,8 +122,21 @@ with st.form("form_pedido"):
     email = st.text_input("Email")
     telefone = st.text_input("Telefone")
     observacoes = st.text_area("Observações")
+    
+    # Verificar se serviços selecionados requerem informações adicionais
+    requer_info_adicional = any(servico in servicos_requerem_info_adicional for servico in selecao_servicos)
+    
+    if requer_info_adicional:
+        st.subheader("Informações Adicionais")
+        matricula = st.text_input("Matrícula")
+        nome_completo = st.text_input("Nome Completo")
+        nome_universidade = st.text_input("Nome da Universidade")
+        polo_universidade = st.text_input("Polo da Universidade")
+        st.info("Se necessário, entraremos em contato para obter informações adicionais de forma segura.")
+    
     submitted = st.form_submit_button("Enviar Pedido")
 
     if submitted:
         st.success("Pedido enviado com sucesso! Entraremos em contato em breve.")
         # Aqui você pode adicionar o código para enviar um email ou salvar as informações em um banco de dados
+        # As informações coletadas estão disponíveis nas variáveis correspondentes
