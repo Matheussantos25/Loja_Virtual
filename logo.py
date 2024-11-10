@@ -11,7 +11,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 # Carregar a imagem
-imagem = Image.open('C:\\Users\\msdof\\Downloads\\Loja_virtual\\ead.png')  # Substitua 'logo.png' pelo nome ou caminho da sua imagem
+imagem = Image.open('ead.png')  # Substitua 'logo.png' pelo nome ou caminho da sua imagem
 
 # Criar duas colunas
 col1, col2 = st.columns([1, 3])  # Ajuste as proporções conforme necessário
