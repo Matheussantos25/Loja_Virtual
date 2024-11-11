@@ -1,5 +1,7 @@
 streamlit
 pandas
-qrcode
 pillow
-uuid
+qrcode
+smtplib
+email
+requests
