@@ -2,4 +2,5 @@ Pedido ID,Data,Nome,Email,Telefone,Serviços Selecionados,Detalhes dos Serviços
 4586f263-5382-47b8-bbc5-8be546ca6c17,10/11/2024 09:44:55,dsadasdasdsa,dsada@gmail,,Resumo,{'Resumo': 'N/A'},,40,,,,,Pendente
 b242641a-c718-4fb8-be79-b3b28d4364df,10/11/2024 09:45:48,ana,ana@gmail.com,,Prova do,{'Prova do': 'N/A'},,15,,,,,Pendente
 3e7cfe95-6bdb-4949-847a-4d4041098491,10/11/2024 09:55:53,dsadasdasdsa,dsada@gmail,,Resumo,{'Resumo': 'N/A'},,40,,,,,Pendente
-be8016bf-0473-423f-b8ec-b3d58684aa0f,10/11/2024 14:55:35,ok,assa@gmail.com,23132321321,Resumo,{'Resumo': 'N/A'},,40,,,,,Pendente
+be8016bf-0473-423f-b8ec-b3d58684aa0f,10/11/2024 14:55:35,ok,assa@gmail.com,23132321321.0,Resumo,{'Resumo': 'N/A'},,40,,,,,Pendente
+c286bd32-68ec-4b76-bcaf-5c7bdb2ba234,11/11/2024 00:32:19,a,,,Resumo,{'Resumo': 'N/A'},,40,,,,,Pendente
